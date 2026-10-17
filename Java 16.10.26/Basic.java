@@ -9,9 +9,8 @@ class Number
           System.out.println(i);
         }
     }
-  }
+  
 
-class count {
     void count(long num)
     {
         int count=0;
@@ -21,11 +20,9 @@ class count {
             }
         System.out.println(count);
     }
-}
 
-class vote
-    {
-        void check(int age)
+
+        void vote_check(int age)
         {   
             if(age<18)
             {
@@ -36,11 +33,8 @@ class vote
                 System.out.println("You can vote");
             }
         }
-    }
+    
 
-
-class Even
-    {
         void even(int limit)
         {   
             for(int i=0;i<=limit;i+=2)
@@ -48,22 +42,18 @@ class Even
                     System.out.println(i);
                 }
         }
-    }
+    
 
-class for_loop
-    {
-        void use(int limit)
+        void use_for(int limit)
         {
             for(int i=0;i<=limit;i++)
                 {
                     System.out.println(i);
                 }
         }
-    }
+  
 
-class positive
-    {
-        void check(int num)
+        void check_num(int num)
         {
             if(num==0)
             {
@@ -78,19 +68,15 @@ class positive
                System.out.println(num+"this number is negetive");
            }
         }
-    }
 
-class Divide
-    {
-        void div(int value,int division)
+
+        void divide(int value,int division)
         {
             System.out.println(value%division==0?value+" this number is divisible by this "+division+" number":value+" this number is not divisible by this "+division+" number");
         }
-    }
 
-class SWITCH
-    {
-        void find(int a,int b,char operator)
+
+        void calculator(int a,int b,char operator)
         {
          switch(operator)
              {
