@@ -1,6 +1,6 @@
-Package basic;
+package basic;
 
-class number
+class Number
   {
     public void print_num(int limit)
     {
@@ -12,7 +12,7 @@ class Basic
 {
   public static void main(String [] args)
   {
-    number n= new number();
+    Number n= new Number();
     n.print_num(100);
   }
 }
