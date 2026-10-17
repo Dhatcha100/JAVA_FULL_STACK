@@ -4,7 +4,10 @@ class Number
   {
     public void print_num(int limit)
     {
-      for(int i=1;i<=limit;i++;
+      for(int i=1;i<=limit;i++)
+        {
+          System.out.println(i);
+        }
     }
   }
 
