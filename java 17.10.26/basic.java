@@ -33,7 +33,7 @@ class own
       System.out.println("enter age and mark for checking eligblity");
       int age=scan.nextInt();
       int mark=scan.nextInt();
-      boolean result=(age>=18 && mark>=50)?true:false;
+      boolean result=(age>=18 && mark>=50);
       System.out.println(result);
     }
 
