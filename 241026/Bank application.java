@@ -20,10 +20,11 @@ class account
         private final void createAcc(int pin,int acc,String name)
         {
             long index=account_no-530000;
-            this.accounts[index]=account_no+1;
-this.pins[index]=pin;
-this.names[index]=name;
-this.accountstype[index]=acc;
+            int i=(int) index;
+            this.accounts[i]=account_no+1;
+this.pins[i]=pin;
+this.names[i]=name;
+this.accountstype[i]=acc;
             
         }
 
@@ -90,11 +91,37 @@ if(this.accounts[accI]==acc && this.pins[pinI]==pin)
                 this.balance[accI]+=amount;
                 return "amount credited Rs "+amount;
         }
+
+        final String widthdraw(long acc,int pin,int amount)
+        {
+          
+          int accI=0;
+            int pinI=0;
+            for(int i=0;i<accounts.length;i++)
+                {
+                    if(accounts[i]==acc)
+                    {
+                        accI=i;
+                        pinI=i;
+                        break;
+                    }
+                    
+                }  
+                if(balance[accI]>=amount)
+                {
+                this.balance[accI]-=amount;
+                return "amount debited Rs "+amount;
+                }
+                else{
+                    return "your account doesn't have anoungh balance \n your account balance is :"+balance[accI];
+               }
+            
+        }
     }
     
     class savings extends accounts
         {
-            class deposit(long acc,int pin)
+            void deposit(long acc,int pin)
         {
             Scanner scan=new Scanner (System.in);
             int check=accounts.checkacc(acc,pin);
@@ -112,4 +139,23 @@ if(this.accounts[accI]==acc && this.pins[pinI]==pin)
                 }
                 }
             }
+
+           void widthdraw(long acc,int pin)
+        {
+            Scanner scan=new Scanner (System.in);
+            int check=accounts.checkacc(acc,pin);
+            if(check==1)
+            {
+               System.out.println("enter the amount") ;
+            int amount=scan.nextInt();
+            if(amount%500==0)   
+            {        String result= super.widthdraw(acc,pin,amount);
+            System.out.println(result);
+                }
+                else
+            {
+                System.out.println("minimum widthdraw amount atleast 500 or multiples of 500");
+                }
+                }
+        }
             }
